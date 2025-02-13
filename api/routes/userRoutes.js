@@ -6,7 +6,6 @@ const userService = require('../services/userService');
 // Get user profile (based on token)
 router.get('/profile', verifyToken, async (req, res) => {
     const loggedInUser = req.user; // Extracted user info from the token
-	console.log(loggedInUser);
 
     try {
         // Fetch user details based on the user ID in the token
